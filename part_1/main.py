@@ -1,3 +1,4 @@
 import numpy as np
-import requests
+from lib.parser import doc_etebac
 
+print(doc_etebac)
