@@ -10,3 +10,7 @@ certaines lignes de ce document ressemblent aux 3 lignes suivantes:
 0112300453    222102EUR256    LIB123000451299   0000000004567
 07232222122345222202EUR333123  45 21987654322   0000000100000
 01111111111   221111EUR224     NOminal 123412   0000000001000
+
+# Atention !!! #
+Il pourrait que le fichier se lit comme une grande chaine de caractères, en donnant l'impression que le document est juste une ligne avec une centaine des milliers de caracterès.
+En réalité les lignes existent et si on ouvre le document avec notepad++ on verra à la fin de chaque ligne il y a le symbole LF (voir ASCII). On pourra utiliser cet indice pour lire correctement le document.
