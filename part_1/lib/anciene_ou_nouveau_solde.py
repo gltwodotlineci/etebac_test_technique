@@ -1,5 +1,4 @@
 
-
 class AncienOuNouveauSolde:
     def __int__(self, code_engistrement,code_banque, nombre_decimales, nr_compte,
                 date_ancien_solde, date_nouveau_solde,montant):
@@ -10,4 +9,4 @@ class AncienOuNouveauSolde:
         self.date_ancien_solde = date_ancien_solde
         self.date_nouveau_solde = date_nouveau_solde
         self.montant = montant
-            
+

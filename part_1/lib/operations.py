@@ -1,5 +1,4 @@
 
-
 class Operations:
         def __int__(self, code_engistrement, code_banque, nombre_decimales, nr_compte,
                     code_operation_nterbancaires, date_de_valeure, libelle_de_loperation, montant):
@@ -11,4 +10,3 @@ class Operations:
             self.date_de_valeure = date_de_valeure
             self.libelle_de_loperation = libelle_de_loperation
             self.montant = montant
-
