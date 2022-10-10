@@ -7,7 +7,7 @@ class AncienSolde:
         self.data = data
         self.dict_releve_compte = dict()
 
-        def ancien_solde_line(self):
+        def ancien_solde_line():
             self.dict_releve_compte["Code Engistrement"] = self.data[0:2]
             self.dict_releve_compte["Code Banque"] = self.data[3:7]
             self.dict_releve_compte["Account Nb"] = self.data[22:32]
@@ -16,14 +16,14 @@ class AncienSolde:
                 self.dict_releve_compte["Credit Montant"] = self.data[91:103]
             else:
                 self.dict_releve_compte["Montant Credit"] = self.data[91:103]
-        return self.dict_releve_compte
+            return self.dict_releve_compte
 
 class NewSolde:
     def __init__(self, data):
         self.data = data
         self.dict_releve_compte = {}
 
-        def new_solde_line(self):
+        def new_solde_line():
             self.dict_releve_compte["Code Engistrement"] = self.data[0:2]
             self.dict_releve_compte["Code Banque"] = self.data[3:7]
             self.dict_releve_compte["Account Nb"] = self.data[22:32]
@@ -32,14 +32,15 @@ class NewSolde:
                 self.dict_releve_compte["Credit Montant"] = self.data[91:103]
             else:
                 self.dict_releve_compte["Montant Credit"] = self.data[91:103]
-        return self.dict_releve_compte
+            return self.dict_releve_compte
+
 
 class Operations:
     def __init__(self, data):
         self.data = data
         self.dict_releve_compte = {}
 
-        def operation_lines(self):
+        def operation_line():
             self.dict_releve_compte["Code Engistrement"] = self.data[0:2]
             self.dict_releve_compte["Code Banque"] = self.data[3:7]
             self.dict_releve_compte["Account Nb"] = self.data[22:32]
@@ -48,7 +49,8 @@ class Operations:
                 self.dict_releve_compte["Credit Montant"] = self.data[91:103]
             else:
                 self.dict_releve_compte["Montant Credit"] = self.data[91:103]
-        return self.dict_releve_compte
+            return self.dict_releve_compte
+
 
 class ReleveBancaire:
     def __init__(self, data):
@@ -60,7 +62,7 @@ class ReleveBancaire:
             if line[0:2] == "01":
                 self.big_arr.append(AncienSolde(line).ancien_solde_line())
             elif line[0:2] == "04":
-                self.big_arr.append(Operations(line).operation_lines())
+                self.big_arr.append(Operations(line).operation_line())
             elif line[0:2] == "07":
-                self.big_arr.append(NewSolde(line).new_solde_line())
+                self.big_arr.append(NewSolde(line).dict_releve_compte())
         self.big_arr
