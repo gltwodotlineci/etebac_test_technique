@@ -1,4 +1,4 @@
-from anciene_ou_nouveau_solde import AncienOuNouveauSolde
+from anciene_solde import AncienSolde
 from operations import Operations
 from parser import doc_etebac
 
@@ -7,4 +7,6 @@ class ReadCreateData:
         self.all_lines = []
 
         def reading_type_of_solde(self):
-            "Pass"
+            for array in self.all_lines:
+                if array[0:2] == "01":
+                    "Pass"
