@@ -1,0 +1,9 @@
+[
+	[{'Code Engistrement': '01', 'Code Banque': '12240', 'Account Nb': '30000899222', 'Ancien solde date': '260222', 'Debit Montant': '000000415354'}],
+	[{'Code Engistrement': '04', 'Code Banque': '12240', 'Account Nb': '30000899222', 'Operation date': '260222', 'operation name': 'RAIS VIRT SEPA        N 222380', 'Debit Montant': '000000000035'}],
+	[{'Code Engistrement': '04', 'Code Banque': '12240', 'Account Nb': '30000899222', 'Operation date': '260222', 'operation name': 'EM CHQTLC 909784921182022     ', 'Credit Montant': '000000000718'}],
+	...
+	...
+	[{'Code Engistrement': '04', 'Code Banque': '12240', 'Account Nb': '90024394222', 'Operation date': '300222', 'operation name': 'IR AMER4444 EXPRES11PAYMENTS E', 'Debit Montant': '000000000562'}],
+	[{'Code Engistrement': '07', 'Code Banque': '12240', 'Account Nb': '90024394222', 'New solde date': '300222', 'Credit Montant': '000001491590'}]
+]
