@@ -2,45 +2,17 @@
 class Operations:
     def __init__(self, data):
         self.data = data
-        self.ind_loop
         self.dict_releve_compte = {}
 
-        def operation_lines(self):
-            self.dict_releve_compte["Code Engistrement"] = self.data[self.ind_loop][0:2]
-            self.dict_releve_compte["Code Banque"] = self.data[self.ind_loop][3:7]
-            self.dict_releve_compte["Account Nb"] = self.data[self.ind_loop][22:32]
-            self.dict_releve_compte["Libelle of operation"] = self.data[self.ind_loop][49:79]
-            if self.data[104] == "A":# | self.sold_line[104] == "B" | self.sold_line[104] == "C" | self.sold_line[104] == "D":
-                self.dict_releve_compte["Credit Montant"] = self.data[self.ind_loop][91:103]
-            else:
-                self.dict_releve_compte["Montant Credit"] = self.data[self.ind_loop][91:103]
+    def operation_line(self):
+        self.dict_releve_compte["Code Engistrement"] = self.data[0:2]
+        self.dict_releve_compte["Code Banque"] = self.data[2:7]
+        self.dict_releve_compte["Account Nb"] = self.data[21:32]
+        self.dict_releve_compte["Operation date"] = self.data[34:40]
+        self.dict_releve_compte["operation name"] = self.data[49:79]
+        if self.data[103] == "A" or self.data[103] == "B" or self.data[103] == "C" or self.data[103] == "D" or self.data[103] == "E"\
+        or self.data[103] == "F" or self.data[103] == "G" or self.data[103] == "H" or self.data[103] == "H" or self.data[103] == "{":
+            self.dict_releve_compte["Credit Montant"] = self.data[91:103]
+        else:
+            self.dict_releve_compte["Debit Montant"] = self.data[91:103]
         return self.dict_releve_compte
-
-'''
-        def __int__(self, code_engistrement, code_banque, nombre_decimales, nr_compte,
-                    code_operation_interbancaires, date_de_valeure, libelle_de_loperation,
-                    montant_credit, montant_debit):
-            self.code_engistrement = code_engistrement
-            self.code_banque = code_banque
-            self.nombre_decimales = nombre_decimales
-            self.nr_compte = nr_compte
-            self.code_operation_interbancaires = code_operation_interbancaires
-            self.date_de_valeure = date_de_valeure
-            self.libelle_de_loperation = libelle_de_loperation
-            self.montant_credit = montant_credit
-            self.montant_debit = montant_debit
-            self.solde_line = []
-
-            def operation_lines(self):
-                self.code_engistrement.append(self.sold_line[0:2])
-                self.code_banque.append(self.sold_line[3:7])
-                self.nombre_decimales.append(self.sold_line[20])
-                self.nr_compte.append(self.sold_line[22:32])
-                self.code_operations_interbancaires.append(self.sold_line[33:34])
-                self.date_de_la_valeur.append(self.sold_line[35:40])
-                self.libelle_de_loperation.append(self.sold_line[42:70])
-                if self.sold_line[104] == "A":
-                    self.montant_credit.append(self.sold_line[91:103])
-                elif self.sold_line[104] == "R":
-                    self.montant_debit.append(self.sold_line[91:103])
-'''
