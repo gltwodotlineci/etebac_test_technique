@@ -22,8 +22,8 @@ a) Le dates des 3 types d'enregistrements sont donnés en chaine de caractères.
     les convertir en dattes.
 
 b) le montant est donné en chaine de caractères et en centimes. Il faut le transformer
-    en décimales. Par exemple pour 000000115 la convertion est 1.15 euros. Le montant il
-    faut aussi le créditer comme montant créditeur ou débiteur.( voir b.1)
+    en décimales. Par exemple pour 000000115 la convertion est 1.15 euros (voir "Nombre de décimales"
+    dans les tables du document CFONB). Le montant il faut aussi le créditer comme montant créditeur ou débiteur.( voir b.1)
 
 b.1) Il faut donner le montant créditeur ou débiteur.
 Pour identifier si le montant est Créditeur ou Débiteur le protocole ETEBAC donne
