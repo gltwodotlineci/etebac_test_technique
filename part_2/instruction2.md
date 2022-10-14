@@ -17,17 +17,18 @@ Il pourrait que le fichier se lit comme une grande chaine de caractères, en don
 En réalité les lignes existent et si on ouvre le document avec notepad++ on verra à la fin de chaque ligne il y a le symbole LF (voir ASCII). On pourra utiliser cet indice pour lire correctement le document.
 
 ----------------------------------------------------------------------------
-Dans la deuxième partie il faut reprendre l'autput de la partie 1 avec certains changements
-a) Le dattes des 3 types d'engistrements sont donnée en chaine de caracteres. Il faut 
+Dans la deuxième partie il faut reprendre l'output de la partie 1 avec certains changements
+a) Le dates des 3 types d'enregistrements sont donnés en chaine de caractères. Il faut
     les convertir en dattes.
 
-b) le montant est donné en chaine de characteres et en centimes. Il faut le transformer
-    en décimales. Par example pour 000000115 il faut le convertir en 1.15 euros
+b) le montant est donné en chaine de caractères et en centimes. Il faut le transformer
+    en décimales. Par exemple pour 000000115 la convertion est 1.15 euros. Le montant il
+    faut aussi le créditer comme montant créditeur ou débiteur.( voir b.1)
 
-c) Il faut donner le montant créditeur ou débiteur.
+b.1) Il faut donner le montant créditeur ou débiteur.
 Pour identifier si le montant est Créditeur ou Débiteur le protocole ETEBAC donne
-l'indice sur le 104-ième charactere de chaque ligne. L'indice donnée est une combinaison
+l'indice sur le 104-ième caractère de chaque ligne. L'indice donné est une combinaison
 entre le système hexadécimal et le codage ASCII. Pour vous faciliter la tache nous
-donnons la traduction des symboles. Pour les lettres de A  jusque à I et le charactere '{'
-il s'agit d'un montant créditaire et pour les lettres de J jusque à R et le charchtere '}'
-il s'agit d'un montant débit. 
+donnons la traduction des symboles. Pour les lettres de A  jusque'à I et le caractère '{'
+il s'agit d'un montant créditeur et pour les lettres de J jusque'à R et le carchtère '}'
+il s'agit d'un montant débiteur.
