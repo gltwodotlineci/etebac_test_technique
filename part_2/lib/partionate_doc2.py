@@ -6,5 +6,5 @@ class AllLines:
 
     def read_lines(self):
         for line in self.doc.splitlines(10):
-            self.lines.append(line)
+            self.lines.append(line[0:119])
         return self.lines
