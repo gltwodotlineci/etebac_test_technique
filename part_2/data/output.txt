@@ -1,0 +1,10 @@
+[
+    [{'Code Engistrement': '01', 'Code Banque': '12240', 'Account Nb': '30000899222', 'Ancien solde date': datetime.datetime(2022, 3, 26, 0, 0), 'Debit': 4153.54}],
+    [{'Code Engistrement': '04', 'Code Banque': '12240', 'Account Nb': '30000899222', 'Operation Date': datetime.datetime(2022, 3, 26, 0, 0), 'Debit': 0.35}],
+    [{'Code Engistrement': '04', 'Code Banque': '12240', 'Account Nb': '30000899222', 'Operation Date': datetime.datetime(2022, 3, 26, 0, 0), 'Credit': 7.18}],
+    [{'Code Engistrement': '04', 'Code Banque': '12240', 'Account Nb': '30000899222', 'Operation Date': datetime.datetime(2022, 3, 26, 0, 0), 'Credit': 0.59}]
+    ...
+	...
+    [{'Code Engistrement': '04', 'Code Banque': '12240', 'Account Nb': '90024394222', 'Operation Date': datetime.datetime(2022, 3, 30, 0, 0), 'Credit': 5.62}],
+    [{'Code Engistrement': '07', 'Code Banque': '12240', 'Account Nb': '90024394222', 'New solde date': datetime.datetime(2022, 3, 30, 0, 0), 'Credit': 14915.9}]
+]
