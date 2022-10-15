@@ -9,5 +9,5 @@ class NewSolde:
         self.dict_releve_compte["Code Banque"] = self.data[2:7]
         self.dict_releve_compte["Account Nb"] = self.data[21:32]
         self.dict_releve_compte["New solde date"] = self.data[34:40]
-        self.dict_releve_compte["Debit Montant"] = self.data[91:103]
+        self.dict_releve_compte["Montant"] = self.data[91:103]
         return self.dict_releve_compte
