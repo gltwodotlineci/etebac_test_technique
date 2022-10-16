@@ -122,22 +122,24 @@ compte nous devrons lui ajouter un numéro pour chaque extrait de compte. Donc p
 données par bloc.
 
 Une fois que nous avons ajouté les numéros d'extraits de compte. on peut ajouter les libellés supplémentaires de 
-l'enregistrement "05" à sa propre opération.
+l'enregistrement "05" à l'opération avec le code d'enregistrement"04". En faite si la ligne avec le code "04" est suivie
+par un ou plusieurs lignes qui commencent avec le code "05" tous les libellés de ses lignes sont liées au libellé de
+la dernière ligne avec le code "04"
+
 par exemple:
 
 pour la partie:
 01      12240        00974EUR   30000899222     260322             0000000414740R
 04      12240    0200974EUR2E   30000899222     260322  Lib 1      0000000002000E                
-05      12240    0200974EUR2E   30000899222     260322  lib sup1        
-05      12240    0200974EUR2E   30000899222     260322  lib sup2 
-07      12240      00974EUR2    30000899222     290322   11        0000000412740M        
+05      12240    0200974EUR2E   30000899222     260322  lib sup.a        
+05      12240    0200974EUR2E   30000899222     260322  lib sup.b
+04      12240    0200974EUR2E   30000899222     260322  Lib 2      0000000001000E                
+05      12240    0200974EUR2E   30000899222     260322  lib sup.c 
+07      12240      00974EUR2    30000899222     290322   11        0000000413740M        
 
 Nous devrons avoir:
 
-0112240    00974EUR2 30000899222  260322                                          0000000414740R
-04      12240    0200974EUR2E   30000899222     260322   Lib 1 lib sup1 lib sup2  0000000002000E                
-05      12240    0200974EUR2E   30000899222     260322                                   
-05      12240    0200974EUR2E   30000899222     260322                            
-07      12240      00974EUR2    30000899222     290322   11                        0000000412740M 
-
-
+01      12240    00974EUR2      30000899222   260322                             0000000414740R
+04      12240    0200974EUR2E   30000899222   260322  Lib 1 lib sup.a lib sup.b  0000000002000E
+04      12240    0200974EUR2E   30000899222   260322  Lib 2 lib sup.c            0000000001000E                
+07      12240      00974EUR2    30000899222   290322   11                        0000000412740M 
