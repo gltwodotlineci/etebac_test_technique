@@ -1,7 +1,6 @@
 from date import DateConvertor
 from credit_debit import DeterminateCreditDebit
 
-
 class AncienSolde:
     def __init__(self, data):
         self.data = data
