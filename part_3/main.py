@@ -9,15 +9,3 @@ output_releve = ReleveBancaire(result3).red_releve()
 
 output3 = CreateNrDextrait(output_releve).create_indice()
 print(output3)
-
-
-'''
-indice = 0
-for val in output3:
-    hh = val[0]
-    if val[0]["Code Engistrement"] == "01":
-        indice = indice + 1
-    hh["Indice extrait compte"] = indice
-    print(hh)
-    #print(val[0]["Code Engistrement"])
-'''
