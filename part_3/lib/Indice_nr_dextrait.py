@@ -7,8 +7,8 @@ class CreateNrDextrait:
 
     def create_indice(self):
         for val in self.data:
-            hh = val[0]
-            if val[0]["Code Engistrement"] == "01":
+            hh = val
+            if val["Code Enregistrement"] == "01":
                 self.indice = self.indice + 1
             hh["Nr d'extrait de compte"] = self.indice
             self.array_return.append(hh)
