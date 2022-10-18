@@ -21,6 +21,8 @@ class ReleveBancaire:
                self.big_arr.append([AncienSolde(line).ancien_solde_line()])
             if line[0:2] == "04":
                 self.big_arr.append([Operations(line).operation_line()])
+            if line[0:2] == "05":
+                self.big_arr.append([OperationsSuplementaires(line).operation_sup_line()])
             if line[0:2] == "07":
                 self.big_arr.append([NewSolde(line).new_solde_line()])
         return self.big_arr
@@ -51,6 +53,19 @@ class Operations:
         self.dict_releve_compte["Account Nb"] = self.data[21:32]
         self.dict_releve_compte["Operation Date"]= DateConvertor(self.data).convert_to_date()
         DeterminateCreditDebit(self.data, self.dict_releve_compte).credit_or_debit()
+        return self.dict_releve_compte
+
+
+class OperationsSuplementaires:
+    def __init__(self, data):
+        self.data = data
+        self.dict_releve_compte = {}
+
+    def operation_sup_line(self):
+        self.dict_releve_compte["Code Engistrement"] = self.data[0:2]
+        self.dict_releve_compte["Code Banque"] = self.data[2:7]
+        self.dict_releve_compte["Account Nb"] = self.data[21:32]
+        self.dict_releve_compte["Libelle complementaire"] = self.data[40:81]
         return self.dict_releve_compte
 
 

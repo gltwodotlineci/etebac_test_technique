@@ -8,4 +8,4 @@ result3 = AllLines(doc_etebac3).read_lines()
 output_releve = ReleveBancaire(result3).red_releve()
 
 output3 = CreateNrDextrait(output_releve).create_indice()
-print(output3)
+print(output3[2:9])
