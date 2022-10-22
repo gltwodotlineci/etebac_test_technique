@@ -7,9 +7,10 @@ from lib.adding_libelle05_to_lib04 import AddingLib05ToLib04
 
 result3 = AllLines(doc_etebac3).read_lines()
 output_releve = ReleveBancaire(result3).red_releve()
-output_with_libelle = AddingLib05ToLib04(output_releve).opertaing_on_05()
-#final_output = CreateNrDextrait(output_with_libelle).create_indice()
-#for i in output_with_libelle:
- #   print(i['Libelle of operation'])
+output_with_lib_indice = CreateNrDextrait(output_releve).operate_indexes()
 
-print((output_with_libelle[0:5]))
+for val in output_with_lib_indice:
+    print(val["Code Enregistrement"])
+    print(val["libelle indice"])
+    print(val["Nr d'extrait de compte"])
+    print("----")
