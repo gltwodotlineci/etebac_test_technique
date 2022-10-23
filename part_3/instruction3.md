@@ -143,3 +143,5 @@ Nous devrons avoir:
 04      12240    0200974EUR2E   30000899222   260322  Lib 1 lib sup.a lib sup.b  0000000002000E
 04      12240    0200974EUR2E   30000899222   260322  Lib 2 lib sup.c            0000000001000E                
 07      12240      00974EUR2    30000899222   290322   11                        0000000412740M 
+
+## Voir le document output dans 'data' pour avoir une idée sur le resultat. A notter que la clé 'libelle indice': peut faire de la solution pour associer les libelles d'enregistements "05" au "04". Il est pas obligé d'utiliser la meme méthode.

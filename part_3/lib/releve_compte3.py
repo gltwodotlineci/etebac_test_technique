@@ -1,12 +1,8 @@
-from datetime import datetime
-
-'''
 from ancien_solde3 import AncienSolde
 from operations3 import Operations
+from operations_suplementaire import OperationsSuplementaires
 from new_solde3 import NewSolde
-from date import DateConvertor
-from credit_debit import DeterminateCreditDebit
-'''
+
 
 class ReleveBancaire:
     def __init__(self, data):
@@ -26,8 +22,7 @@ class ReleveBancaire:
             if line[0:2] == "07":
                 self.big_arr.append([NewSolde(line).new_solde_line()])
         return self.big_arr
-
-
+'''
 class AncienSolde:
     def __init__(self, data):
         self.data = data
@@ -111,4 +106,4 @@ class DeterminateCreditDebit:
             if self.data[103] == self.credit_debit_indicators[indice+10]:
                 self.given_dictionary["Debit"] = int(self.data[91:103])/(10 ** int(self.data[19]))
                 return self.given_dictionary
-
+'''
