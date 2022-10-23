@@ -1,5 +1,5 @@
 
-class CreateNrDextrait:
+class CreateNrDextraitAndLibelleIndex:
     def __init__(self, data):
         self.data = data
         self.indice = 0

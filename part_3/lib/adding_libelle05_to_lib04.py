@@ -6,14 +6,6 @@ class AddingLib05ToLib04:
         self.index_libelle = 0
         self.array_return = []
 
-    def operate_libell_index(self):
-        for val in self.data:
-            hh = val[0]
-            if val[0]["Code Enregistrement"] == "04":
-                self.index_libelle += 1
-            hh["libelle indice"] = self.index_libelle
-            self.array_return.append(hh)
-        return self.array_return
 
     def opertaing_on_05(self):
         pass
